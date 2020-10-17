@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TriviumTest < ActiveSupport::TestCase
+class TriviaTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
