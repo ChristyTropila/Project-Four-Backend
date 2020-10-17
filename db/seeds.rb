@@ -44,7 +44,7 @@ treat9=TrickTreat.create!(name: "Unlimited monthly metrocard", category: 1, haun
 treat10=TrickTreat.create!(name: "Timbs", category: 1, haunted_house_id: house2.id )
 treat11=TrickTreat.create!(name: "Uptowns", category: 1, haunted_house_id: house3.id)
 treat12=TrickTreat.create!(name: "1620 Key", category: 1, haunted_house_id:house4.id )
-treat13=TrickTreat.create!(name: "Coffee Regular", category: 1, haunted_house_id: house5.id)
+treat13=TrickTreat.create!(name: "Coffee regular", category: 1, haunted_house_id: house5.id)
 treat14=TrickTreat.create!(name: "Nutcracker", category: 1, haunted_house_id: house6.id )
 treat15=TrickTreat.create!(name: "Katz pastrami on rye with mustard. Juicy~", category: 1, haunted_house_id: house7.id )
 treat16=TrickTreat.create!(name: "Dim Sum giftcard", category: 1, haunted_house_id: house8.id)
@@ -56,7 +56,7 @@ trick4=TrickTreat.create!(name: "Parking ticket"  , category: 2, haunted_house_i
 trick5=TrickTreat.create!(name: "Pigeon droppings" , category: 2, haunted_house_id: house5.id)
 trick6=TrickTreat.create!(name: "Tourist"  , category: 2, haunted_house_id: house6.id)
 trick7=TrickTreat.create!(name: "Surged Uber fare"  , category: 2, haunted_house_id: house7.id)
-trick8=TrickTreat.create!(name: "Metro machine eats your money", category: 2, haunted_house_id: house8.id)
+trick8=TrickTreat.create!(name: "Metro machine eats money", category: 2, haunted_house_id: house8.id)
 trick9=TrickTreat.create!(name: "Bumper to bumper traffic" , category: 2, haunted_house_id: house1.id)
 trick10=TrickTreat.create!(name: "Towed vehicle" , category: 2, haunted_house_id: house2.id)
 trick11=TrickTreat.create!(name: "Cash only metro station" , category: 2, haunted_house_id: house3.id)
@@ -69,7 +69,23 @@ trick16=TrickTreat.create!(name: "Cockroaches" , category: 2, haunted_house_id: 
 
 
 #trivia questions
-trivia=Trivia.create!(question: "What is todays date", haunted_house_id: house1.id)
+trivia=Trivia.create!(question: "What is the largest park in NYC?", haunted_house_id: house1.id)
+trivia2=Trivia.create!(question: "What is the only subway service for which the entirety of its route runs underground?", haunted_house_id: house2.id)
+trivia3=Trivia.create!(question: "Which of the following subway stations is NOT abandoned?", haunted_house_id: house3.id )
+trivia4=Trivia.create!(question: "Which borough was the only one in which Trump won the majority of votes in presidential election of 2016?", haunted_house_id:house4.id )
+trivia5=Trivia.create!(question: "In which borough was hiphop born?", haunted_house_id:house5.id )
+trivia6=Trivia.create!(question: "Which word or phrase is not considered part of NYC parlance?", haunted_house_id: house6.id )
+trivia7=Trivia.create!(question: "Which of the following is NOT a toll bridge?", haunted_house_id: house7.id )
+trivia8=Trivia.create!(question: "Which of the following bridges do not connect Manhattan to Brooklyn?", haunted_house_id: house8.id )
+trivia9=Trivia.create!(question: "Which of the following neighborhoods has the smallest population?", haunted_house_id: house1.id )
+trivia10=Trivia.create!(question: "What’s the only Brooklyn neighborhood that shares its name with a Disney movie?", haunted_house_id:house2.id )
+trivia11=Trivia.create!(question: "What NYC museum started in Gracie Mansion and later moved to 5th Ave. between 103rd St. and 104th St.?", haunted_house_id: house3.id )
+trivia12=Trivia.create!(question: "What's the correct order of boroughs from largest to smallest?", haunted_house_id: house4.id)
+trivia13=Trivia.create!(question: "Which of these subway lines does not run express?", haunted_house_id: house5.id)
+trivia14=Trivia.create!(question: "Flushing, Queens is known for what kind of cuisine?", haunted_house_id: house6.id )
+trivia15=Trivia.create!(question: "Which NYC zoo is the largest city zoo in the United States?", haunted_house_id: house7.id )
+trivia16=Trivia.create!(question: "Which public park in Queens is host to the annual U.S. Open tennis tournament?", haunted_house_id: house8.id )
+
 
 
 # Bucket.create!(user_id:christy.id, trick_treat_id: treat.id)
