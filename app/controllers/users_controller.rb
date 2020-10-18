@@ -13,11 +13,12 @@ class UsersController < ApplicationController
         render json: @user
        else
         render json: {errors: @user.errors.full_messages}
-end
+  end
 end
 
 private
 def user_params
     params.permit(:name, :userName, :password)
  end
+
 end

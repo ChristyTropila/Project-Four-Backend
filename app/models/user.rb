@@ -8,5 +8,5 @@ class User < ApplicationRecord
     #     "Hey #{object.name}!, #{data[:value]} is taken already! Try Again!"
     # end
   
-    }
+    
 end
