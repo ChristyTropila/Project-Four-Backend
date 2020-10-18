@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/haunted_houses/:id', to: 'haunted_houses#show'
 
   get '/trick_treats', to: 'trick_treats#index'
-  get '/trick_treats', to: 'trick_treats#show'
+  get '/trick_treats/:id', to: 'trick_treats#show'
   delete '/trick_treats/:id', to: 'trick_treats#destroy'
 
   get '/buckets', to: 'buckets#index'
