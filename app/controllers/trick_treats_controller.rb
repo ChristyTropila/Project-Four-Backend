@@ -10,7 +10,7 @@ class TrickTreatsController < ApplicationController
         @trick_treat=TrickTreat.find(params[:id])
         @name={name: @trick_treat.name,  id: @trick_treat.id}
         render json: @name
-     byebug
+
     end
 end
 

@@ -5,6 +5,11 @@ class UsersController < ApplicationController
     render json: @users
  end
 
+def show
+  
+   @user=User.find_by(userName: params[:userName])
+   render json: @user
+end
 
  def create
     @user=User.create(user_params)
@@ -13,7 +18,21 @@ class UsersController < ApplicationController
         render json: @user
        else
         render json: {errors: @user.errors.full_messages}
+       end
   end
+
+  def login
+   @error=flash[:error]
+  end
+
+def handle_login
+   byebug
+   @user=User.find_by(userName: params[:userName])
+   if @user
+      render json: @user
+   else
+      render json: {errors: @user.errors.full_messages}
+ end
 end
 
 def update
