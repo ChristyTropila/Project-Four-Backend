@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get '/buckets', to: 'buckets#index'
   get '/buckets/:id', to: 'buckets#show'
   post '/buckets', to: 'buckets#create'
+  delete '/buckets/:id/:user_id', to: 'buckets#destroy'
 
 
 
