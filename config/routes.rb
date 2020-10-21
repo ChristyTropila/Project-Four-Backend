@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get '/login/:userName', to: 'users#handle_login'
 
-  get '/trivia', to: 'trivia#index'
+  get '/trivia/:haunted_house_id', to: 'trivia#index'
   get '/trivia/:id', to: 'trivia#show'
 
   get '/haunted_houses', to: 'haunted_houses#index'
