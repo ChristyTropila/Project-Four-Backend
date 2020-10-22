@@ -1,8 +1,12 @@
 class BucketsController < ApplicationController
 
     def index
+    
         @buckets=Bucket.all
-        render json: @buckets
+   @newBucket= @buckets.select do |bucket|
+         bucket.user_id===params[:user_id].to_i
+        end
+        render json: @newBucket
     end
 
     def create
@@ -12,7 +16,7 @@ class BucketsController < ApplicationController
     @buckets.push(@bucket)
    end
    render json: @buckets
-    end
+end
 
     def destroy
 
@@ -25,6 +29,9 @@ class BucketsController < ApplicationController
     end
 
 
+    def findUser
+        byebug
+    end
 
     private
     

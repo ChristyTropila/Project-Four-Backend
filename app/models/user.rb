@@ -8,6 +8,16 @@ class User < ApplicationRecord
         "Hey #{object.name}!, #{data[:value]} is taken already! Try Again!"
     end
 }
+
+def getCategories
+ 
+ catArray=[]
+    self.trick_treats.select do|cat|
+  
+     catArray.push(cat.category)
+    end
+    return catArray
+end
   
     
 end

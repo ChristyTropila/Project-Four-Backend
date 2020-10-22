@@ -18,10 +18,12 @@ Rails.application.routes.draw do
   get '/trick_treats/:id', to: 'trick_treats#show'
   delete '/trick_treats/:id', to: 'trick_treats#destroy'
 
-  get '/buckets', to: 'buckets#index'
+ 
+  get '/buckets/:user_id', to: 'buckets#index'
   get '/buckets/:id', to: 'buckets#show'
   post '/buckets', to: 'buckets#create'
   delete '/buckets/:id/:user_id', to: 'buckets#destroy'
+ 
 
 
 
