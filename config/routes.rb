@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   patch '/users/:id', to: 'users#update'
   delete '/users/:id', to: 'users#destroy'
 
-  get '/login/:userName', to: 'users#handle_login'
+  post '/users/login', to: 'users#login'
 
   get '/trivia/:haunted_house_id', to: 'trivia#index'
   get '/trivia/:id', to: 'trivia#show'

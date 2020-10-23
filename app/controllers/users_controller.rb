@@ -6,7 +6,6 @@ class UsersController < ApplicationController
  end
 
 def show
-  
    @user=User.find_by(userName: params[:userName])
    render json: @user
 end
@@ -22,16 +21,24 @@ end
   end
 
   def login
-   @error=flash[:error]
+   byebug
+   @user=User.find_by(userName: params[:userName])
+   byebug
+   if @user && @user.authenticate(params[:password])
+      byebug
+      render json: @user
+   else
+      render json: {error: "INCORRECT USERNAME OR PASSWORD"}, status: 422
+ end
   end
 
 def handle_login
-   byebug
+ 
    @user=User.find_by(userName: params[:userName])
-   if @user
+   if @user && @user.authenticate(params[:password])
       render json: @user
    else
-      render json: {errors: @user.errors.full_messages}
+      render json: {error: "INCORRECT USERNAME OR PASSWORD"}, status: 422
  end
 end
 
