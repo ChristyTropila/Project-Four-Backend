@@ -16,35 +16,26 @@ end
         session[:user_id]=@user.id
         render json: @user
        else
-        render json: {errors: @user.errors.full_messages}
+        render json:  {error: "USERNAME IS TAKEN! TRY AGAIN"}, status: 422
        end
   end
 
   def login
-   byebug
    @user=User.find_by(userName: params[:userName])
-   byebug
    if @user && @user.authenticate(params[:password])
-      byebug
+      # wristband= encode_token({user_id: @user.id})
+      # byebug
       render json: @user
    else
       render json: {error: "INCORRECT USERNAME OR PASSWORD"}, status: 422
  end
   end
 
-def handle_login
- 
-   @user=User.find_by(userName: params[:userName])
-   if @user && @user.authenticate(params[:password])
-      render json: @user
-   else
-      render json: {error: "INCORRECT USERNAME OR PASSWORD"}, status: 422
- end
-end
+
 
 def update
    @user=User.find(params[:id])
-   @user.update(name: params[:name], userName: params[:userName])
+   @user.update(name: params[:name], userName: params[:userName], password: params[:password])
    render json: @user
 end
 
