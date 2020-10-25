@@ -1,24 +1,52 @@
-# README
+# Trick or Treat
+A Halloween trivia game implementing a React.js frontend and a Ruby on Rails backend. This is my first React application and also my first time working with a google maps api. 
+This project integrates everything I learned in module 4 including the ability to: 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ * Design and architect features across frontend and backend
+ * Communicate and collaborate in a technical environment
+ * Build and iterate on a project MVP
+ * Debug issues in small- to medium-sized projects
+ * Integrate React.js and Rails
 
-Things you may want to cover:
+Trick or Treat was inspired by my love for Halloween. I wanted to challenge myself and incorprate a google maps to dynamically create trivia questions. If the user correctly answers the trivia question, they receive a treat, if incorrect, a trick.
 
-* Ruby version
+# User Stories
 
-* System dependencies
+* User can login or create new registration
+* User can navigate the map and answer different trivia questions
+* User can view their bucket to see a list of all their tricks and treats
+* User can update their profile
+* User can delete items from their bucket
 
-* Configuration
+# How to play
+# You must clone the frontend to this project as well!!
+https://github.com/ChristyTropila/Module-four-frontend
 
-* Database creation
+1) Clone both repos to your local computer
+2) CD into backend repo and and open up a text editor of your choice
+3) In terminal run the following commands
+4) bundle install  -install gems
+5) rails db:migrate -add migrations to data tables
+6) rails db:seed -seed the program with seeded data
+7) rails s -p 4000 start up the server
+8) Open up the frontend repo and run npm install
+9) After installation, start up the server and run npm start
+10) Open up a tab in your browser and navigate to "http://localhost:3000/login"
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+# Stack and Gems used
 
-* Deployment instructions
-
-* ...
+* Visual Studio Code
+* PostgresSQL
+* Rails as an API
+* React.js
+* HTML/CSS
+* ActiveRecord
+* google-maps-react
+* Google Fonts
+* rack-cors
+* active_model_serializers
+* toastify
+* react-router-dom
+* bcrypt
