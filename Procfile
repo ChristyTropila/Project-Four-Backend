@@ -1,1 +1,2 @@
-web: bundle exec rails server -p 4000
+web
+bin/rails server -p ${PORT:4000} -e $RAILS_ENV
