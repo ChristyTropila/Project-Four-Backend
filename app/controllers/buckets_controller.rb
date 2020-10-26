@@ -3,7 +3,7 @@ class BucketsController < ApplicationController
     def index
     
         @buckets=Bucket.all
-   @newBucket= @buckets.select do |bucket|
+       @newBucket= @buckets.select do |bucket|
          bucket.user_id===params[:user_id].to_i
         end
         render json: @newBucket
