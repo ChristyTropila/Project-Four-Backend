@@ -17,11 +17,6 @@ class TriviaController < ApplicationController
         render json: @sortedTrivia
     end
 
-    def show
-    end
-
-    def new
-    end
 
     
 end
